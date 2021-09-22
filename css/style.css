@@ -3,6 +3,12 @@ nav div {
     border: 2px solid black;
     border-radius: 5px;
     padding: 10px;
+    cursor: pointer;
+}
+
+nav div:hover {
+    background-color: rgb(209, 69, 69);
+    color: mintcream;
 }
 
 header {
@@ -16,12 +22,12 @@ nav {
     padding: 60px;
 }
 
-#contain {
+#contain, #detail {
     display: flex;
     flex-direction:column;
     border:salmon 1px solid;
     width: 80%;
-    margin: auto;
+    margin: 20px auto;
     padding: 20px;
 }
 
@@ -30,13 +36,8 @@ nav {
     justify-content: space-between;
     padding: 10px;
 }
-
-.next {
-    display: flex;
-    width: 50%;
-    margin: auto;
-    justify-content: space-between;
-    padding: 15px;
+.ligne:hover {
+    background-color: rgba(0, 255, 0, 0.2);
 }
 
 .classement {
@@ -44,3 +45,4 @@ nav {
     display: flex;
     justify-content: right;
 }
+
