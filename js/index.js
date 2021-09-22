@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
     })
     /**
      * Permet d'afficher le contenu d'une url
-     * @param {String} url 
+     * @param {String} url - url à appeler en ajax
      */
     function afficherPage(url) {
         let monUrl = new URL(url)
@@ -30,7 +30,7 @@ window.addEventListener('load', () => {
 
             for (let nom of data.results) {
                 console.log(nom.name);
-                $('<div class="ligne">' + '<div class= "classement">' + ++nb + " - " + '</div>' + '<div class="name">' + (nom.name || (+nb)) + '</div>' + '</div>').appendTo(contain).click(event => {
+                $('<div class="ligne">' + '<div class= "classement">' + ++nb + " - " + '</div>' + '<div class="name">' + (nom.name || (+nb)) + '</div>' + '</div>').appendTo(contain).click(event => { // Le || en JS permet de remplacer la première valeur par la deuxième si la première valeur est nulle ou indefinie
                     console.log(event.target)
                     details.html("") // efface contenu de détail
                     $.get(nom.url, data => {
@@ -61,8 +61,8 @@ window.addEventListener('load', () => {
 
     /**
      * Sert à parser un objet en String (à créer un tableau html) la mise en page, c'est de la merde !
-     * @param {Object} data 
-     * @param {String} parentKey 
+     * @param {Object} data - objet de données récupérées depuis une url de l'api
+     * @param {number|undefined} decalage - permet de mettre une marge à gauche 
      */
     function parse(data, decalage = 0) {
         for (let key in data) {
