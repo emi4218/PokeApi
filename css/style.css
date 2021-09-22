@@ -1,0 +1,46 @@
+nav div {
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+header {
+    height: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    padding: 60px;
+}
+
+#contain {
+    display: flex;
+    flex-direction:column;
+    border:salmon 1px solid;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.ligne {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.next {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.classement {
+    width: 30px;
+    display: flex;
+    justify-content: right;
+}
